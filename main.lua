@@ -1,6 +1,9 @@
 -- bootstrap the compiler
 fennel = require("fennel")
-table.insert(package.searchers, fennel.make_searcher())
+table.insert(package.searchers,
+             fennel.make_searcher({
+                 env=_G
+                 }))
 
 pp = function(x) print(require("fennelview")(x)) end
 

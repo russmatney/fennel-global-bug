@@ -18,3 +18,14 @@ lua main.lua
 > "fennel global print"
 
 > nil
+
+
+## Update
+
+Fixed by passing `_G` as the `env` to the fennel compiler:
+
+```lua
+fennel = require("fennel")
+table.insert(package.searchers,
+             fennel.make_searcher({env=_G}))
+```
