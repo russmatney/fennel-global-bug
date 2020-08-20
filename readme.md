@@ -8,8 +8,13 @@ lua main.lua
 ```
 
 > "lua global print"
+
 > {
+
 >   :luaHello "world"
+
 > }
+
 > "fennel global print"
+
 > nil
